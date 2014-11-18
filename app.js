@@ -5,7 +5,7 @@ var express = require('express'),
     glob = require('glob'),
     mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGO_URL || config.db);
+mongoose.connect(process.env.MONGO_URL || process.env.DB_URL || config.db);
 var db = mongoose.connection;
 db.on('error', function () {
   throw new Error('unable to connect to database at ' + config.db);

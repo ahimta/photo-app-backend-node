@@ -112,13 +112,11 @@ router
                 from: 'Photo App <noreply@photo-app.com>'
                 to: newClient.email
                 subject: 'Your profile was created successfully'
-                text: "
-                    With name '#{newClient.name}' and email '#{newClient.email}'.
+                text: "With name '#{newClient.name}' and email '#{newClient.email}'.
                     You can delete your profile in https://pa.mod.bz/#/clients?client_id=#{newClient.id}&token=#{newClient.token}
                     In addition you can see other users' profiles in https://pa.mod.bz/#/clients
                   "
-                html: "
-                    With name <b>#{newClient.name}</b> and email <b>#{newClient.email}</b>.
+                html: "With name <b>#{newClient.name}</b> and email <b>#{newClient.email}</b>.
                     You can delete your profile <a href='https://pa.mod.bz/#/clients?client_id=#{newClient.id}&token=#{newClient.token}'>here</a>
                     In addition you can see other users' profiles <a href='https://pa.mod.bz/#/clients'>here</a>
                   "
